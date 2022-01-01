@@ -3,7 +3,7 @@ from app.bmicalc import bmi_calculator
 from flask import Flask, jsonify, request
 
 # instantiate a flask object
-app = Flask(__name__)
+app = Flask('__name__')
 
 @app.route('/', methods=['GET', 'POST'])
 
