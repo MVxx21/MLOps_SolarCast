@@ -1,17 +1,23 @@
-MLOps for AI Engineers and Data Scientits
-https://omdena.com/course/mlops-for-ai-engineers-and-data-scientists/
-_______________________________________
-
-- Course provided by Omdena with real-world case study
-
-- Goals include:
-    - To build knowledge of MLOps concepts, flow and implementation 
+<p align="center">
+  <img src="https://i0.wp.com/www.phdata.io/wp-content/uploads/2021/07/code-validate-deploy-loop-1024x426.png" width="650" title="hover text">
+</p>
+<br/>
+<br/>
+<br/>
+Omdena - MLOps for AI Engineers and Data Scientits <br/>
+https://omdena.com/course/mlops-for-ai-engineers-and-data-scientists/   <br/>
+  
+_______________ 
+<br/>
+  
+- Goals include
+    - To build knowledge of MLOps concepts, flow and implementation
     - To know how to deploy machine learning models across different cloud infrastructures
-    - To understand the automation of model deployments.
-
-
-- Course content
-
+    - To understand the automation of model deployments
+  <br/>
+_______________
+<br/>
+<br/>
 - A glance at ML Life Cycle
     - Challenges facing MLOps
 
