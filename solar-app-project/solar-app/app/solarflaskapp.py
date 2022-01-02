@@ -1,9 +1,11 @@
 '''
+inputs: month, day, daily_temp, daily_precip, daily_humidity, daily_pressure, daily_windDir,
+        daily_windSpeed, daily_DNI, daily_DHI
 
+output: daily_radiation
 '''
 
 # import modules
-import re
 from flask import Flask, app, jsonify, request
 import numpy as np
 import joblib as jl
@@ -13,7 +15,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def get_input():
     '''
-    
+    Flask script to interface between user request and ml model selected during POC    
     '''
     # load packets
     packet=request.get_json(force=True)
