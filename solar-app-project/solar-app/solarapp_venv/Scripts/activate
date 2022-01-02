@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Rag\Documents\Projects\Omdena\MLOps\solar-app\solarapp_venv"
+VIRTUAL_ENV="C:\Users\Rag\Documents\Projects\Omdena\MLOps\solar-app-project\solar-app\solarapp_venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
