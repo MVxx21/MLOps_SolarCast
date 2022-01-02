@@ -18,6 +18,7 @@ _______________
 _______________
 <br/>
 <br/>
+
 - A glance at ML Life Cycle
     - Challenges facing MLOps
 
