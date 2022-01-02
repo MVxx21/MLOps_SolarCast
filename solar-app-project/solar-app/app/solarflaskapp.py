@@ -1,14 +1,14 @@
 '''
-inputs: month, day, daily_temp, daily_precip, daily_humidity, daily_pressure, daily_windDir,
-        daily_windSpeed, daily_DNI, daily_DHI
+inputs: month, day, Daily_Temp, Daily_Precip, Daily_Humidity, Daily_Pressure, Daily_WindDir,
+        Daily_WindSpeed, Daily_DNI, Daily_DHI
 
-output: daily_radiation
+output: Daily_radiation
 '''
 
 # import modules
-from flask import Flask, app, jsonify, request
+from flask import Flask, jsonify, request
 import numpy as np
-import joblib as jl
+import joblib
 
 app = Flask(__name__)
 
@@ -18,19 +18,19 @@ def get_input():
     Flask script to interface between user request and ml model selected during POC    
     '''
     # load packets
-    packet=request.get_json(force=True)
+    packet = request.get_json(force=True)
     
     # extract and reshape input data
-    input_data=list(packet.values())
+    input_data = list(packet.values())
 
     # reshape data
-    data=np.array(input_data.reshape(1, 10))
+    data = np.array(input_data).reshape(1, 10)
 
     # load the ml model
-    model_path='app/model_rfr.plk'
-    model=jl.load(model_path)
+    model_path = 'app/model_rfr.pkl'
+    model = joblib.load(model_path)
 
     # generate prediction
-    solar_irr=model.predict(data)[0]
+    solar_irr = model.predict(data)[0]
 
     return jsonify(packet, {'Solar irradiation':solar_irr})
