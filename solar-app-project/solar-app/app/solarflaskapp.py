@@ -33,4 +33,4 @@ def get_input():
     # generate prediction
     solar_irr=model.predict(data)[0]
 
-    return jsonify('solar irradiation': solar_irr)
+    return jsonify(packet, {'Solar irradiation':solar_irr})
